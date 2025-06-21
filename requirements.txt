@@ -1,0 +1,54 @@
+# /requirements.txt
+# タイトル: requirements.txt (Corrected)
+# 役割: プロジェクトに必要な全てのライブラリを定義する。プロバイダーごと、機能ごとに整理。
+
+# === Core Dependencies ===
+# 基本的な動作、設定読み込み、HTTP通信に必要
+python-dotenv>=1.0.0
+numpy<2.0
+httpx>=0.24.0
+pydantic>=2.0.0
+pydantic-settings>=2.0.0
+
+# === LLM Provider-Specific Dependencies ===
+# 各クラウドプロバイダーを利用する場合に必要
+openai>=1.10.0            # For OpenAIProvider
+anthropic>=0.20.0         # For ClaudeProvider
+google-generativeai>=0.4.0 # For GeminiProvider
+huggingface-hub>=0.20.0     # For HuggingFaceProvider and huggingface-cli
+
+# === High-Performance Local Inference (CPU/Mac) ===
+# Llama.cppプロバイダーを利用する場合に必要
+# [server] を付けることで、APIサーバー機能も一緒にインストールされます
+llama-cpp-python[server]>=0.2.70
+
+# === RAG (Retrieval-Augmented Generation) Dependencies ===
+# RAG機能（--rag, --wikipedia）を利用する場合に必要
+langchain>=0.1.0
+langchain-community>=0.0.20
+langchain-huggingface>=0.0.3
+sentence-transformers>=2.2.0
+faiss-cpu>=1.7.0          # or faiss-gpu for GPU support
+pypdf>=3.0.0              # For PDF document loading
+beautifulsoup4>=4.9.0       # For HTML parsing
+wikipedia>=1.4.0            # For Wikipedia search
+
+# === Emotion Core Dependencies ===
+sae-lens>=2.2.0             # For loading Sparse Autoencoders
+
+# === Tool & Optional Dependencies ===
+# 追加機能を利用する場合に必要
+openai-whisper>=20231117   # For audio processing
+langdetect>=1.0.9           # For multi-language complexity detection
+spacy>=3.0.0,<4.0.0         # For advanced NLP-based complexity analysis
+# Corrected package name for SerpApi
+google-search-results>=2.4.2 # for web_search_tool and image_retrieval tool
+
+# === Development & Documentation ===
+# 開発やテスト、ドキュメント生成時に必要
+pytest>=7.0.0
+pytest-asyncio>=0.21.0
+black>=23.0.0
+mypy>=1.0.0
+mkdocs>=1.4.0
+mkdocs-material>=8.0.0
