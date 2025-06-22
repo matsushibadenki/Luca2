@@ -1,0 +1,23 @@
+{
+  "joy": [
+    "joy",
+    "happy",
+    "cheerful",
+    "glee",
+    "delight"
+  ],
+  "sadness": [
+    "sadness",
+    "unhappy",
+    "sorrow",
+    "grief",
+    "misery"
+  ],
+  "interest": [
+    "interest",
+    "curiosity",
+    "fascination",
+    "attention",
+    "intrigue"
+  ]
+}

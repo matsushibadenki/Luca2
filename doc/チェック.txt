@@ -1,0 +1,18 @@
+ステップ1: 静的コード解析 (インポートと型の整合性チェック)
+mypy llm_api/
+※エラーが出る時は、ri -rf .mypy_cacheでキャッシュを削除
+
+ステップ2: 既存のテストスイートの実行
+pytest tests/
+
+ステップ3: 診断スクリプトによる基本動作確認
+python quick_test_v2.py
+
+a) 適応モード (基本的なパイプラインの動作確認)
+python fetch_llm_v2.py ollama "自己認識とは何か、簡潔に教えてください。" --mode adaptive --json
+
+b) 自己発見モード (strategy_hub.pyの動作確認)
+python fetch_llm_v2.py ollama "新しいプログラミング言語を効率的に学習するための計画を立ててください。" --mode self_discover
+
+c) JSON出力での詳細確認
+python fetch_llm_v2.py ollama "AI倫理における主要な課題を3つ挙げてください。" --mode balanced --json
