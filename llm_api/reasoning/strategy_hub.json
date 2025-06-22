@@ -1,0 +1,46 @@
+{
+    "general_planning": {
+        "id": "general_planning",
+        "name": "General Planning Strategy",
+        "problem_class": "planning",
+        "steps": [
+            "DECOMPOSE",
+            "PLAN_STEP_BY_STEP",
+            "VALIDATE_AND_REFINE"
+        ],
+        "performance_metrics": {
+            "success_rate": 1.0,
+            "execution_count": 5
+        },
+        "version": 1
+    },
+    "general_analysis": {
+        "id": "general_analysis",
+        "name": "General Analysis Strategy",
+        "problem_class": "analysis",
+        "steps": [
+            "CRITICAL_THINKING",
+            "SYNTHESIZE",
+            "VALIDATE_AND_REFINE"
+        ],
+        "performance_metrics": {
+            "success_rate": 0.0,
+            "execution_count": 0
+        },
+        "version": 1
+    },
+    "general_default": {
+        "id": "general_default",
+        "name": "Default Strategy",
+        "problem_class": "general",
+        "steps": [
+            "DECOMPOSE",
+            "SYNTHESIZE"
+        ],
+        "performance_metrics": {
+            "success_rate": 0.0,
+            "execution_count": 0
+        },
+        "version": 1
+    }
+}
